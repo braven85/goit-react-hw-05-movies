@@ -1,0 +1,26 @@
+.Container {
+  display: flex;
+  margin: 20px 0;
+  background-color: #d7fff5;
+}
+
+.MoviePosterContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 18%;
+}
+
+.MoviePoster {
+  width: 100%;
+}
+
+.MovieInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  padding-left: 1%;
+}

@@ -1,0 +1,16 @@
+.CastList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.CastItem {
+  box-shadow: 0 0 5px 1px #b8b8b8;
+  border-radius: 5px;
+}
+
+.CastImage {
+  border-radius: 5px;
+}
