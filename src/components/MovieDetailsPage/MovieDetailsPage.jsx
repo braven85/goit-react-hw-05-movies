@@ -74,7 +74,7 @@ function MoviesDetailsPage() {
       <HorizontalLine />
       <div className={styles.MoreInfoContainer}>
         <h2>Additional information</h2>
-        <ul>
+        <ul className={styles.MoreInfoList}>
           <li>
             <NavigationLink
               link={`/movies/${movieId}/cast`}
