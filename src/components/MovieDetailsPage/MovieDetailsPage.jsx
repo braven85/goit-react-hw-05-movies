@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, Outlet, useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import HorizontalLine from "../HorizonalLine/HorizontalLine";
 import NavigationLink from "../NavigationLink/NavigationLink";
 import styles from "./MovieDetailsPage.module.css";
@@ -53,7 +53,7 @@ function MoviesDetailsPage() {
         </div>
         <div className={styles.MovieInfo}>
           <h2>
-            {original_title} {release_date}
+            {original_title} ({release_date ? release_date.slice(0, 4) : ""})
           </h2>
           <p>User Score: {userScore}%</p>
           <h3>Overview</h3>
