@@ -17,9 +17,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
+          <Route index element={<HomePage />} />
           <Route path="/" element={<App />}>
-            <Route index element={<HomePage />} />
-
             <Route path="movies" element={<MoviesPage />}>
               <Route path=":movieId" element={<MoviesDetailsPage />}>
                 <Route path="cast" element={<Cast />} />
@@ -27,7 +26,14 @@ ReactDOM.render(
               </Route>
             </Route>
 
-            <Route path="*" element={<HomePage />} />
+            <Route
+              path="*"
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>There's nothing here!</p>
+                </main>
+              }
+            />
           </Route>
         </Routes>
       </Suspense>
