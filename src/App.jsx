@@ -1,33 +1,14 @@
 import "./App.css";
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import HorizontalLine from "./components/HorizonalLine/HorizontalLine";
+import NavigationLink from "./components/NavigationLink/NavigationLink";
 
 function App() {
   return (
     <div className="App">
       <div className="navigation">
-        <NavLink
-          className="navigation__item"
-          style={({ isActive }) => {
-            return {
-              color: isActive ? "#FF0000" : "#000000",
-            };
-          }}
-          to={`/`}
-        >
-          Home
-        </NavLink>
-        <NavLink
-          className="navigation__item"
-          style={({ isActive }) => {
-            return {
-              color: isActive ? "#FF0000" : "#000000",
-            };
-          }}
-          to={`/movies`}
-        >
-          Movies
-        </NavLink>
+        <NavigationLink link={`/`} description={`Home`} />
+        <NavigationLink link={`/movies`} description={`Movies`} />
       </div>
       <HorizontalLine />
       <Outlet />

@@ -14,7 +14,6 @@ function Cast() {
         .then((resp) => resp.json())
         .then((data) => {
           setCast(data.cast);
-          console.log(data.cast);
         });
     } catch (err) {
       return console.error(err);
@@ -43,8 +42,8 @@ function Cast() {
                 alt={name}
               />
             )}
-            <p>{name}</p>
-            <p>{character}</p>
+            <p className={styles.ActorName}>{name}</p>
+            <p className={styles.CharacterName}>{character}</p>
           </li>
         ))
       ) : (

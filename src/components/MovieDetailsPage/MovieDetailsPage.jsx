@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Link, NavLink, Outlet, useParams } from "react-router-dom";
 import HorizontalLine from "../HorizonalLine/HorizontalLine";
+import NavigationLink from "../NavigationLink/NavigationLink";
 import styles from "./MovieDetailsPage.module.css";
 
 function MoviesDetailsPage() {
@@ -71,14 +72,20 @@ function MoviesDetailsPage() {
         </div>
       </div>
       <HorizontalLine />
-      <div>
-        <p>Additional information</p>
+      <div className={styles.MoreInfoContainer}>
+        <h2>Additional information</h2>
         <ul>
           <li>
-            <Link to={`/movies/${movieId}/cast`}>Cast</Link>
+            <NavigationLink
+              link={`/movies/${movieId}/cast`}
+              description={`Cast`}
+            />
           </li>
           <li>
-            <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
+            <NavigationLink
+              link={`/movies/${movieId}/reviews`}
+              description={`Reviews`}
+            />
           </li>
         </ul>
       </div>

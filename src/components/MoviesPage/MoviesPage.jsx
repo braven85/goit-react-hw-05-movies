@@ -62,14 +62,18 @@ function MoviesPage() {
       </button>
       {!params.movieId && (
         <div>
-          <form onSubmit={onSubmit}>
-            <input type="text" name="query" />
-            <button type="submit">Search</button>
+          <form className={styles.SearchForm} onSubmit={onSubmit}>
+            <input className={styles.SearchInput} type="text" name="query" />
+            <button className={styles.SearchButton} type="submit">
+              Search
+            </button>
           </form>
-          <ul>
+          <ul className={styles.FoundMoviesList}>
             {movies.map(({ id, original_title }) => (
               <li key={id}>
-                <Link to={`/movies/${id}`}>{original_title}</Link>
+                <Link className={styles.FoundMovieItem} to={`/movies/${id}`}>
+                  {original_title}
+                </Link>
               </li>
             ))}
           </ul>
