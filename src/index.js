@@ -17,8 +17,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<HomePage />} />
+          <Route element={<App />}>
+            <Route path="/" index element={<HomePage />} />
 
             <Route path="movies" element={<MoviesPage />}>
               <Route path=":movieId" element={<MoviesDetailsPage />}>
