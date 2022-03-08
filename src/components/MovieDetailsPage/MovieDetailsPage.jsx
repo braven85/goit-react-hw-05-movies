@@ -77,13 +77,13 @@ function MoviesDetailsPage() {
         <ul className={styles.MoreInfoList}>
           <li>
             <NavigationLink
-              link={`/goit-react-hw-05-movies/movies/${movieId}/cast`}
+              link={`/movies/${movieId}/cast`}
               description={`Cast`}
             />
           </li>
           <li>
             <NavigationLink
-              link={`/goit-react-hw-05-movies/movies/${movieId}/reviews`}
+              link={`/movies/${movieId}/reviews`}
               description={`Reviews`}
             />
           </li>

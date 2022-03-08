@@ -8,11 +8,11 @@ function App() {
     <div className="App">
       <div className="navigation">
         <NavigationLink
-          link={`/goit-react-hw-05-movies/`}
+          link={`/`}
           description={`Home`}
         />
         <NavigationLink
-          link={`/goit-react-hw-05-movies/movies`}
+          link={`movies`}
           description={`Movies`}
         />
       </div>
