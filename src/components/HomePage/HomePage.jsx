@@ -49,7 +49,7 @@ function HomePage() {
             <li key={id}>
               <Link
                 className={styles.ListItem}
-                to={`/movies/${id}`}
+                to={`/goit-react-hw-05-movies/movies/${id}`}
               >
                 {original_title}
               </Link>

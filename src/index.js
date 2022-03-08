@@ -17,10 +17,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<App />}>
+          <Route path="/goit-react-hw-05-movies/" element={<App />}>
             <Route index element={<HomePage />} />
             <Route
-              path="movies/"
+              path="/goit-react-hw-05-movies/movies/"
               element={<MoviesPage />}
             >
               <Route path=":movieId" element={<MoviesDetailsPage />}>

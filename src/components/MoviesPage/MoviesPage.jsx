@@ -73,7 +73,7 @@ function MoviesPage() {
               <li key={id}>
                 <Link
                   className={styles.FoundMovieItem}
-                  to={`/movies/${id}`}
+                  to={`/goit-react-hw-05-movies/movies/${id}`}
                 >
                   {original_title}
                 </Link>
