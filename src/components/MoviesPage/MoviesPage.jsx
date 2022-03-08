@@ -71,7 +71,10 @@ function MoviesPage() {
           <ul className={styles.FoundMoviesList}>
             {movies.map(({ id, original_title }) => (
               <li key={id}>
-                <Link className={styles.FoundMovieItem} to={`/movies/${id}`}>
+                <Link
+                  className={styles.FoundMovieItem}
+                  to={`/goit-react-hw-05-movies/movies/${id}`}
+                >
                   {original_title}
                 </Link>
               </li>

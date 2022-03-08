@@ -47,7 +47,10 @@ function HomePage() {
         ) : (
           movies.results.map(({ id, original_title }) => (
             <li key={id}>
-              <Link className={styles.ListItem} to={`movies/${id}`}>
+              <Link
+                className={styles.ListItem}
+                to={`/goit-react-hw-05-movies/movies/${id}`}
+              >
                 {original_title}
               </Link>
             </li>

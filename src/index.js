@@ -17,16 +17,26 @@ ReactDOM.render(
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<App />}>
+          <Route path="/goit-react-hw-05-movies/" element={<App />}>
             <Route index element={<HomePage />} />
-            <Route path="movies" element={<MoviesPage />}>
+            <Route
+              path="/goit-react-hw-05-movies/movies/"
+              element={<MoviesPage />}
+            >
               <Route path=":movieId" element={<MoviesDetailsPage />}>
                 <Route path="cast" element={<Cast />} />
                 <Route path="reviews" element={<Reviews />} />
               </Route>
             </Route>
 
-            <Route path="*" element={<HomePage />} />
+            <Route
+              path="*"
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>There's nothing here!</p>
+                </main>
+              }
+            />
           </Route>
         </Routes>
       </Suspense>
